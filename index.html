@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+<title></title>
+<style>
+  body {
+    font-family: "Courier New", monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #FFD700, #FF4500);
+  }
+
+  .profile-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background-color: #ddd;
+  }
+
+  .profile-name {
+    font-size: 1.5em;
+    margin: 5px 0;
+  }
+
+  .profile-title {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+  }
+  .profile-description {
+    font-size: 0.8em;
+    color: #555;
+    margin: 0;
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+
+  .social-icon {
+    font-size: 1em;
+    margin: 0 10px;
+    color: #555;
+  }
+  .social-vote-button {
+    margin-top: 15px;
+  }
+
+  .vote-button {
+    background-color: blueviolet;
+    color: #FFF;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .powered-by {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 0.8em;
+  }
+</style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="logo.png" alt="Profile Picture" class="profile-picture">
+    <h2 class="profile-name">Team Riyadh</h2>
+    <p class="profile-title">tickling your taste bud</p>
+    <p class="profile-description">Please we need your vote!</p>
+    <div class="social-links">
+      <a href="https://twitter.com/AluStanley" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/teamriyadh/" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/teamriyadh/" class="social-icon"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="social-vote-button">
+      <button onclick="showCustomAlert()" class="vote-button">Vote</button>
+    </div>
+    <br><br>
+    <p class="powered-by">Powered by <strong>Food Network</strong></p>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+  <script>
+    function showCustomAlert() {
+      Swal.fire({
+        title: 'Oops!',
+        text: 'Something went wrong with your vote.',
+        icon: 'error',
+        confirmButtonText: 'Try Again'
+      });
+    }
+  </script>
+</body>
+</html>
