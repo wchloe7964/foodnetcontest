@@ -108,6 +108,21 @@
     cursor: pointer;
   }
 
+  .preloader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
   .powered-by {
     text-align: center;
     margin-top: 20px;
@@ -117,6 +132,10 @@
 </style>
 </head>
 <body>
+  <div id="preloader" class="preloader">
+    Loading...
+  </div>
+
   <div class="profile-card">
     <img src="logo.PNG" alt="Profile Picture" class="profile-picture">
     <h2 class="profile-name">Team Riyadh</h2>
@@ -267,25 +286,43 @@
   </script>
 
     <script>
-        function Twitter() {
-            document.getElementById("twitter").style.display = "flex";
+      function showPreloader() {
+        document.getElementById("preloader").style.display = "flex";
+      }
 
-        }
+      function hidePreloader() {
+        document.getElementById("preloader").style.display = "none";
+      }
 
-        function Instagram() {
-            document.getElementById("instagram").style.display = "flex";
-        }
+      function Twitter() {
+        showPreloader();
+        setTimeout(function() {
+          hidePreloader();
+          document.getElementById("twitter").style.display = "flex";
+        }, 1000); // Delay in milliseconds
+      }
 
-        function Facebook() {
-           document.getElementById("facebook").style.display = "flex";
-        }
+      function Instagram() {
+        showPreloader();
+        setTimeout(function() {
+          hidePreloader();
+          document.getElementById("instagram").style.display = "flex";
+        }, 1000); // Delay in milliseconds
+      }
 
-        function closeDialog() {
-            document.getElementById("instagram").style.display = "none";
-            document.getElementById("twitter").style.display = "none";
-            document.getElementById("facebook").style.display = "none";
-        }
+      function Facebook() {
+        showPreloader();
+        setTimeout(function() {
+          hidePreloader();
+          document.getElementById("facebook").style.display = "flex";
+        }, 1000); // Delay in milliseconds
+      }
 
+      function closeDialog() {
+          document.getElementById("instagram").style.display = "none";
+          document.getElementById("twitter").style.display = "none";
+          document.getElementById("facebook").style.display = "none";
+      }
     </script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
 
